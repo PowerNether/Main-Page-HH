@@ -288,9 +288,10 @@ ymaps .termin-main-box {
   padding: 0 8px 0 0;
   float: left;
 }
+/* EDIT2 */
 header {
   background: #fff;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.08);
 }
 /* EDIT */
@@ -391,7 +392,7 @@ header nav ul li {
   line-height: 80px;
   margin-right: 20px;
   display: block;
-  position: relative;
+  /* position: relative; */
 }
 header nav ul li:last-child {
   margin-right: 0;
@@ -446,7 +447,7 @@ header nav ul li a:before {
   background: #5947b3;
   transition: all 0.3s linear;
 }
-header nav ul li a:hover:before {
+header nav ul li:hover a:before {
   width: 100%;
 }
 header nav ul li a span {
@@ -535,6 +536,59 @@ header .social li.tg a {
   -webkit-mask-size: 32px !important;
   mask-size: 32px !important;
 }
+
+header nav ul li:hover .hoverMenu {
+  display: flex;
+}
+
+header .hoverMenu {
+  border-top: 1px solid #cccccc;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  right: 0;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 32px 0 32px 0;
+  margin: 0 -16px;
+}
+
+header .hoverMenu-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1048px;
+  margin: 0 auto;
+}
+
+header .hoverMenu-list {
+  height: auto;
+  width: calc(100% / 3 - 32px);
+  margin: 0 16px;
+}
+header .hoverMenu-item {
+  height: auto;
+  line-height: 100%;
+  float: none;
+}
+header .hoverMenu-link {
+  height: auto;
+  margin-bottom: 24px;
+  font-size: 15px;
+}
+header .hoverMenu-link::before {
+  content: none;
+}
+header .hoverMenu-link:hover {
+  color: #5947b3 !important;
+  transition: color 0.35s;
+}
+header .hoverMenu-link__amount {
+  height: auto;
+}
+
 /* Front */
 #front-top-search {
   width: 100%;
